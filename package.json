@@ -62,7 +62,7 @@
     },
     "scripts": {
         "prepublishOnly": "npm run build",
-        "postinstall": "npm run build",
+        "preinstall": "npm run build",
         "build": "grunt default",
         "test": "grunt default && node -- ./bin/stmux.js -n -w error -e \"ERROR,!style errors\" -m beep,system -- [ -s 2/3 [ -s 60% -e foo -t shell $SHELL .. 'date; true' ] : 'date; true' ]"
     }
